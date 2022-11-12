@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Go Module Version Numbering</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Blog Template" />
+	<link rel="shortcut icon" href="../assets/favicon.ico" />
+
+	<!-- FontAwesome JS-->
+	<script defer src="../assets/fontawesome/js/all.min.js"></script>
+
+	<!-- Plugin CSS -->
+	<link rel="stylesheet" href="../assets/plugins/highlight/styles/monokai-sublime.css" />
+
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="../assets/css/theme-4.css" />
+</head>
+
+<body>
+	<header class="header text-center">
+		<h1 class="blog-name pt-lg-4 mb-0">
+			<a class="no-text-decoration" href="../index.html">Today's Tech</a>
+		</h1>
+
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+				aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column">
+				<div class="profile-section pt-3 pt-lg-0">
+					<img class="profile-image mb-3 rounded-circle mx-auto" src="../assets/images/profile-pic.png"
+						alt="image" />
+
+					<div class="bio mb-3">
+						Hi, my name is Rashad Jamara. I am software engineer and MSc
+						computer science graduate.
+						<br /><a href="about.html">Find out more about me</a>
+					</div>
+					<ul class="social-list list-inline py-3 mx-auto">
+						<li class="list-inline-item">
+							<a target="_blank" href="https://twitter.com/jamararashad"><i
+									class="fab fa-twitter fa-fw"></i></a>
+						</li>
+						<li class="list-inline-item">
+							<a target="_blank" href="https://www.linkedin.com/in/rashad-j"><i
+									class="fab fa-linkedin-in fa-fw"></i></a>
+						</li>
+						<li class="list-inline-item">
+							<a target="_blank" href="https://github.com/Rashad-j"><i
+									class="fab fa-github-alt fa-fw"></i></a>
+						</li>
+					</ul>
+					<hr />
+				</div>
+
+				<ul class="navbar-nav flex-column text-start">
+					<li class="nav-item">
+						<a class="nav-link active" href="../index.html"><i class="fas fa-home fa-fw me-2"></i>Blog Home
+							<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../blog-post.html"><i class="fas fa-bookmark fa-fw me-2"></i>Blog
+							Post</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../about.html"><i class="fas fa-user fa-fw me-2"></i>About Me</a>
+					</li>
+				</ul>
+
+				<div class="my-2 my-md-3">
+					<a class="btn btn-primary" href="#" target="_blank">Get in Touch</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="main-wrapper">
+		<article class="blog-post px-3 py-5 p-md-5">
+			<div class="container single-col-max-width">
+				<header class="blog-post-header">
+					<h2 class="title mb-2">Go Module Version Numbering</h2>
+					<div class="meta mb-3">
+						<span class="date">Published 2 days ago</span><span class="time">5 min read</span><span
+							class="comment"><a class="text-link" href="#">0 comments</a></span>
+					</div>
+				</header>
+
+				<div class="blog-post-body">
+					<figure class="blog-banner">
+						<img class="img-fluid" src="../assets/images/blog/0001/banner.png" alt="image" />
+						<figcaption class="mt-2 text-center image-caption">
+							Image Credit: NA
+						</figcaption>
+					</figure>
+					<div class="mb-4 row" style="background: #f9f9f9 none repeat scroll 0 0;">
+						<p class="h6">Contents</p>
+						<div class="col">
+							<ul class="mt-2 list-unstyled">
+								<li>
+									<a class="no-text-decoration" href="#version-number-meaning">Version Number
+										Meaning</a>
+								</li>
+								<li><a class="no-text-decoration" href="#in-development">In Development Version</a>
+								</li>
+								<li><a class="no-text-decoration" href="#pre-release-version">Pre-release Version</a>
+								</li>
+								<li><a class="no-text-decoration" href="#minor-version">Minor Version</a>
+								</li>
+								<li><a class="no-text-decoration" href="#patch-version">Patch Version</a>
+								</li>
+								<li><a class="no-text-decoration" href="#major-version">Major Version</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<p>
+						This blog describes what module version numbers mean. </br>
+						Go module's versioning number can signal different things, including stability, backward
+						compatibility, and release changes.
+						Version number also indicates the state of external modules, e.g. stability.
+					</p>
+					<h3 class="mt-5 mb-3" id="version-number-meaning">Version Number Meaning</h3>
+					<p>
+						Modules are published with a version number uses the semantic versioning model as depicted in
+						the image below:
+					</p>
+					<img class="mb-3 img-fluid" src="../assets/images/blog/0001/version-number.png" alt="image" />
+					<p>
+						The following table describes how the parts of a version number signify a module's stability and
+						backward compatibility.
+					</p>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th scope="col">Version stage</th>
+								<th scope="col">Example</th>
+								<th scope="col">Meaning</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>In development</td>
+								<td>Automatic pseudo-version number v0.x.x</td>
+								<td>Signals that the module is still in development and unstable. This release carries
+									no backward compatibility or stability guarantee</td>
+							</tr>
+							<tr>
+								<td>Major</td>
+								<td>v1.x.x</td>
+								<td>Backward-incompatilbe public API changes. This release carries no guarantee
+									that it will be backward compatible with preceding major versions</td>
+							</tr>
+							<tr>
+								<td>Minor</td>
+								<td>vx.4.x</td>
+								<td>Backward compatible public API changes. This release guarantees background
+									compatibility and stability</td>
+							</tr>
+							<tr>
+								<td>Patch</td>
+								<td>vx.x.1</td>
+								<td>Carries changes that don't affect the module's public API or its dependencies. This
+									release guarantees backward compatibility and stability</td>
+							</tr>
+							<tr>
+								<td>Pre-release</td>
+								<td>vx.x.x-beta.2</td>
+								<td>Pre-release milestone, such as an alpha or beta. This release carries no stability
+									guarantee</td>
+							</tr>
+						</tbody>
+					</table>
+					<h3 class="mt-5 mb-3" id="in-development">In Development</h3>
+					<p>
+						This version release carries no backward compatibility or stability. The version number can take
+						on of the following forms:
+					</p>
+
+					<h5>Pseudo-version number</h5>
+					<p>
+						The syntax for this version is <em>baseVersionPrefix-timestamp-revisionIdentifier</em> for
+						instance: <mark>v0.0.0-20170915032832-14c0d48ead0c</mark></br></br>
+						If a module has not been tagged in its repository, Go will generate a pseudo-version number
+						for use in go.mod. The version number is generated against the commit that hasn't been tagged
+						with semantic version tag.
+					</p>
+					<span>Parts explained below:</span>
+					<ul>
+						<li><b>baseVersionPrefix</b> is a value that is either derived from the preceding tag, or from
+							vX.0.0 if there is no tag</li>
+						<li><b>timestamp</b> is the UTC time the revision was created. In Git this is the commit time
+							.</li>
+						<li><b>revisionIdentifier</b> is a 12 character prefix of the commit hash, or in Subversion, a
+							zero-padded revision number.</li>
+					</ul>
+
+					<h5>v0 number</h5>
+					<p>
+						The syntax takes the form of <mark>v0.x.x</mark> A module published with a v0 number will have a
+						formal semantic version number with a major, minor, and patch part, as well as an optional
+						pre-release identifier.<br>
+						Version v0 can be used in production, but it makes no stability or backward compatibility
+						guarantees. In addition, future versions v1 and later are allowed to break backward
+						compatibility for code using the v0 versions. Thus, developers must pay attention when
+						upgrading from v0.
+
+					</p>
+					<h3 class="mt-5 mb-3" id="pre-release-version">Pre-release Version</h3>
+					<p>
+						This version has no stability guarantees. It signals a pre-release milestone, i.e. alpha or
+						beta, for instance <mark>vx.x.x-beta.2</mark>.
+					</p>
+
+					<h3 class="mt-5 mb-3" id="minor-version">Minor Version</h3>
+					<p>
+						This syntax is <mark>vx.2.x</mark>. The changes in this kind of version is backward compatible
+						and stabile.</br>
+						The changes in this version may includes changes to the module's dependencies, or the addition
+						of new functions, methods, struct fields, or types.
+					</p>
+
+					<h3 class="mt-5 mb-3" id="patch-version">Patch Version</h3>
+					<p>
+						The syntax takes the form of <mark>vx.x.5</mark>. This version guarantees backward compatibility
+						and stability. The changes in this version don't affect the module's functionality or its
+						dependencies. </br>
+						An increment number is only for minor changes such as bug fixes.
+					</p>
+
+					<h3 class="mt-5 mb-3" id="major-version">Major Version</h3>
+					<p>
+						The syntax takes the form of <mark>v1.x.x</mark>. A version of v1 or above signals that the
+						module is stable for use, however, it doesn't
+						guarantee backward compatibility.</br>
+						The increment in this version number represents a significant disruption for the developers
+						whose code uses function in the upgraded module. The disruption may include backward
+						compatibility issues.
+
+					</p>
+
+					<nav class="blog-nav nav nav-justified my-5">
+						<a class="nav-link-prev nav-item nav-link rounded-left" href="#">Previous<i
+								class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+						<a class="nav-link-next nav-item nav-link rounded-right" href="#">Next<i
+								class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+					</nav>
+
+					<div class="blog-comments-section">
+						<div id="disqus_thread"></div>
+						<script>
+							/**
+							*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+							*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+							/*
+							var disqus_config = function () {
+							this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+							this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+							};
+							*/
+							(function () { // DON'T EDIT BELOW THIS LINE
+								var d = document, s = d.createElement('script');
+								s.src = 'https://rashads.disqus.com/embed.js';
+								s.setAttribute('data-timestamp', +new Date());
+								(d.head || d.body).appendChild(s);
+							})();
+						</script>
+						<noscript>Please enable JavaScript to view the <a
+								href="https://disqus.com/?ref_noscript">comments
+								powered by
+								Disqus.</a></noscript>
+					</div>
+					<!--//blog-comments-section-->
+				</div>
+				<!--//container-->
+		</article>
+
+		<section class="promo-section theme-bg-light py-5 text-center">
+			<div class="container">
+				<h2 class="title">Promo Section Heading</h2>
+				<p>
+					You can use this section to promote your side projects etc. Lorem
+					ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+					ligula eget dolor. Aenean massa.
+				</p>
+				<figure class="promo-figure">
+					<a href="https://made4dev.com" target="_blank"><img class="img-fluid"
+							src="../assets/images/promo-banner.jpg" alt="image" /></a>
+				</figure>
+			</div>
+			<!--//container-->
+		</section>
+		<!--//promo-section-->
+
+		<footer class="footer text-center py-2 theme-bg-dark">
+			<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+			<small class="copyright">Template by <a href="https://themes.3rdwavemedia.com" target="_blank">Xiaoying
+					Riley</a></small>
+		</footer>
+	</div>
+	<!--//main-wrapper-->
+
+	<!-- Javascript -->
+	<script src="../assets/plugins/popper.min.js"></script>
+	<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Page Specific JS -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+
+	<!-- Custom JS -->
+	<script src="../assets/js/blog.js"></script>
+</body>
+
+</html>
